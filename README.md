@@ -17,6 +17,9 @@ showcase (screenshots)
 
 <img width="1716" height="1165" alt="fileimport" src="https://github.com/user-attachments/assets/1d3311ff-1cd9-43cf-be2c-cd7bb91846c3" />
 
+> [!NOTE]
+> you might encounter long waiting times at the "analyzing song to detect its bpm..." part. please note that this only should take a few seconds on short songs, and that this depends of your computer's capabilities. however, if you are trying to import a big file, like a playlist for example (+5 min), the wait could be long, but should nowhere exceed somewhere like 1 minute. so yeah! use short songs! i guess...
+
 ## table of contents
 
 - [about](#about)
@@ -47,7 +50,7 @@ the following file formats are supported when it comes to importing audio files.
 ## how is BPM calculated
 BPM calculation is not magic. it's math. i suck at maths, but that's all right. (also this implementation is truely not perfect, but it does the job...)
 
-to calculate the BPM, we use a library called MusicTempo. that library is avalaible on NPM, and it honestly simplifies our lives heavily. so we grab the music, put it thru musicTempo, which will give us the BPM of the song, and then yea!
+to calculate the BPM, we use a library called MusicTempo. that library is avalaible on the [NPM package manager](https://www.npmjs.com/package/music-tempo), and it honestly simplifies our lives heavily. so we grab the music, put it thru musicTempo, which will give us the BPM of the song, and then yea!
 
 then, to convert that BPM onto actual game speed, we just do the math of "60000 / <the bpm>", and that will give us a conversion from "beats per minutes" to "milliseconds per beat", exactly what our code expects, so then we just slam that value into the code and boom, speed changes with the BPM!
 
@@ -93,7 +96,7 @@ many thanks to these who without them, the project may have never seen the light
 
 - [the artists that did the demo songs, check home page](https://tetr.lolodotzip.tech/) - well i definitly needed songs for the demo of the game, and thanks for making your stuff copyright-free!!
 
-- [JSfxr](https://sfxr.me/) - allowed me to make the sound effects by myself! super cool i had never heard of, but thanks!
+- [JSfxr](https://sfxr.me/) - allowed me to make the sound effects by myself! super cool tool i had never heard of, but thanks!
 
 and probably some others I forgotten.. sorry in advance, but thanks for being here!
 
